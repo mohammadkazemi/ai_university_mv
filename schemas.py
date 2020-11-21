@@ -34,6 +34,10 @@ class Vote(VoteBase):
         orm_mode = True
 
 
+class UserLogin(BaseModel):
+    email: str
+    password: str
+
 class UserBase(BaseModel):
     email: str
     name: str

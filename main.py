@@ -1,5 +1,7 @@
 from typing import List
 
+import uvicorn
+
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
@@ -20,12 +22,20 @@ def get_db():
         db.close()
 
 
-@app.post("/users/", response_model=schemas.User)
+@app.post("/user/", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     db_user = crud.get_user_by_email(db, email=user.email)
     if db_user:
         raise HTTPException(status_code=400, detail="Email already registered")
     return crud.create_user(db=db, user=user)
+
+
+@app.post("/login/", response_model=schemas.User)
+def login_user(user: schemas.UserLogin, db: Session = Depends(get_db)):
+    db_user = crud.get_user_by_email(db, email=user.email)
+    if not db_user:
+        raise HTTPException(status_code=400, detail="This email is not registered")
+    return db_user
 
 
 @app.get("/users/", response_model=List[schemas.User])
@@ -42,7 +52,7 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     return db_user
 
 
-@app.post("/users/{user_id}/votes/", response_model=schemas.Vote)
+@app.post("/user/{user_id}/votes/", response_model=schemas.Vote)
 def create_vote_for_user(
         user_id: int, vote: schemas.VoteCreate, db: Session = Depends(get_db)
 ):
@@ -53,3 +63,7 @@ def create_vote_for_user(
 def read_votes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     votes = crud.get_votes(db, skip=skip, limit=limit)
     return votes
+
+
+# if __name__ == '__main__':
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
