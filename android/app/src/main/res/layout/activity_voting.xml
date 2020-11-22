@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VotingActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="309dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="تسلط استاد بر موضوع درس" />
+
+            <EditText
+                android:id="@+id/tasalot_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="دانش عمومی استاد در رشته تحصیلی" />
+
+            <EditText
+                android:id="@+id/general_knowledge_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="جامع نگري و ژرف اندیشی استاد در ارائه مباحث" />
+
+            <EditText
+                android:id="@+id/jame_negari_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="توانایی انتقال مطالب اساسی درس" />
+
+            <EditText
+                android:id="@+id/tavanaii_enteghal_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="داشتن طرح درس مناسب و جامعیت و پیوستگی در ارائه مطالب" />
+
+            <EditText
+                android:id="@+id/dashtane_tarhe_dars_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="کوشش براي طرح مباحث جدید و استفاده از منابع روز آمد" />
+
+            <EditText
+                android:id="@+id/koshesh_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="تناسب راهبردها و شیوه هاي آموزش با اهداف درس" />
+
+            <EditText
+                android:id="@+id/tanasobe_rahbord_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="استفاده از شیوه هاي ارزشیابی مناسب از دانشجو با توجه به اهداف درس" />
+
+            <EditText
+                android:id="@+id/shive_ye_arzeshyabi_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="شرکت دادن دانشجو در مباحث درس" />
+
+            <EditText
+                android:id="@+id/shekat_dadane_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="ایجاد انگیزه و رغبت در دانشجو جهت تحقیق و مطالعه" />
+
+            <EditText
+                android:id="@+id/ijand_angize_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="نحوه مدیریت کلاس" />
+
+            <EditText
+                android:id="@+id/nahve_ye_modiriyat_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="امکان ارتباط) حضوري و غیر حضوري( با استاد در خارج از کلاس" />
+
+            <EditText
+                android:id="@+id/ertebate_hozori_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="آداب و رفتار اجتماعی با دانشجویان و احترام متقابل" />
+
+            <EditText
+                android:id="@+id/adab_v_raftar_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="-واکنش منطقی و معقول به پیشنهادها،انتقادها و دیدگاههاي دانشجویان" />
+
+            <EditText
+                android:id="@+id/vakonesh_manteghi_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="گشاده روئی استاد و تکریم دانشجو" />
+
+            <EditText
+                android:id="@+id/goshade_roii_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="نظرات و پیشنهادات" />
+
+            <EditText
+                android:id="@+id/nazarat_va_pishnahadat_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="textMultiLine" />
+
+
+            <Button
+                android:id="@+id/submit_vote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="submit"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
