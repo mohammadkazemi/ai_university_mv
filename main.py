@@ -53,10 +53,21 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 
 @app.post("/user/{user_id}/votes/", response_model=schemas.Vote)
-def create_vote_for_user(
-        user_id: int, vote: schemas.VoteCreate, db: Session = Depends(get_db)
-):
+def create_vote_for_user(user_id: int, vote: schemas.VoteCreate, db: Session = Depends(get_db)):
     return crud.create_vote_for_user(db=db, vote=vote, user_id=user_id)
+
+
+# todo solving this problem response turn into warning
+@app.post("/user/{user_id}/teacher_votes/", response_model=schemas.TeacherVote)
+def create_teacher_vote(user_id: int, teacher_vote: schemas.TeacherVoteCreate, db: Session = Depends(get_db)):
+    return crud.create_teacher_vote(db=db, teacher_vote=teacher_vote, user_id=user_id)
+
+
+# todo solving this problem response turn into warning
+@app.post("/user/{user_id}/education_employee_votes/", response_model=schemas.EducationEmployeeVote)
+def create_education_employee_vote(user_id: int, education_employee_vote: schemas.EducationEmployeeVoteCreate,
+                                   db: Session = Depends(get_db)):
+    return crud.create_education_employee_vote(db=db, education_employee_vote=education_employee_vote, user_id=user_id)
 
 
 @app.get("/votes/", response_model=List[schemas.Vote])
@@ -64,6 +75,5 @@ def read_votes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     votes = crud.get_votes(db, skip=skip, limit=limit)
     return votes
 
-
 # if __name__ == '__main__':
-#     uvicorn.run(app, host="0.0.0.0", port=8000)
+    # uvicorn.run(app, host="localhost", port=8000)
