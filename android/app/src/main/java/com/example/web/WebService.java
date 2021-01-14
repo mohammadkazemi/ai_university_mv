@@ -1,4 +1,4 @@
-package com.example.web;//package com.example.web;
+package com.example.web;
 
 
 import android.content.Context;
@@ -9,6 +9,8 @@ import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.example.models.CreateEmployeeVoteResponseModel;
+import com.example.models.CreateTeacherVoteResponseModel;
 import com.example.models.CreateUserResponseModel;
 import com.example.models.CreateVoteResponseModel;
 import com.example.models.LoginResponseModel;
@@ -21,7 +23,10 @@ import java.util.Map;
 
 public class WebService {
 
-        private final String BASE_URL                         = "http://85.208.184.49:1399";
+//        private final String BASE_URL                         = "http://85.208.184.49:1399";
+//        private final String BASE_URL                         = "http://127.0.0.1:8000";
+        private final String BASE_URL                         = "http://10.0.2.2:8000";
+//        private final String BASE_URL                         = "http://192.168.1.2:8000";
 //    private final String BASE_URL = "http://localhost:8000";
     private final String LOGIN_URL = "/login/";
     private final String CREATE_USER_URL = "/user/";
@@ -116,4 +121,165 @@ public class WebService {
     }
 
 
+
+    public void postTeacherVoteData(HashMap<String, String> mMap, String userId, Context applicationContext, WebConsumer<CreateTeacherVoteResponseModel> callBack ) {
+        String url = BASE_URL + "/user/" + userId + "/"+"teacher_votes/";
+        JSONObject object = new JSONObject(mMap);
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object,
+                response -> {
+                    CreateTeacherVoteResponseModel map = new Gson().fromJson(response.toString(), CreateTeacherVoteResponseModel.class);
+                    callBack.success(map);
+                }, error -> {
+
+
+            if (error.networkResponse != null) {
+                Toast.makeText(applicationContext, error.networkResponse.statusCode + "", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Content-Type", "application/json");
+                return params;
+            }
+
+            @Override
+            protected Response<JSONObject> parseNetworkResponse(NetworkResponse response) {
+                return super.parseNetworkResponse(response);
+            }
+        };
+        Singelton.getInstance().queue(applicationContext).add(request);
+
+    }
+
+    public void postEmployeeVoteData(HashMap<String, String> mMap, String userId, Context applicationContext, WebConsumer<CreateEmployeeVoteResponseModel> callBack) {
+        String url = BASE_URL + "/user/" + userId + "/"+"education_employee_votes/";
+        JSONObject object = new JSONObject(mMap);
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, object,
+                response -> {
+                    CreateEmployeeVoteResponseModel map = new Gson().fromJson(response.toString(), CreateEmployeeVoteResponseModel.class);
+                    callBack.success(map);
+                }, error -> {
+
+
+            if (error.networkResponse != null) {
+                Toast.makeText(applicationContext, error.networkResponse.statusCode + "", Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("Content-Type", "application/json");
+                return params;
+            }
+
+            @Override
+            protected Response<JSONObject> parseNetworkResponse(NetworkResponse response) {
+                return super.parseNetworkResponse(response);
+            }
+        };
+        Singelton.getInstance().queue(applicationContext).add(request);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

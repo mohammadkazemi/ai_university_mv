@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from . import models, schemas
+import models, schemas
 
 
 def get_user(db: Session, user_id: int):
@@ -16,7 +16,11 @@ def get_user_by_email(db: Session, email: str):
 
 def create_user(db: Session, user: schemas.UserCreate):
     fake_hashed_password = user.password + "not_really_hashed"
-    db_user = models.User(email=user.email, hashed_password=fake_hashed_password, name=user.name)
+    db_user = models.User(email=user.email, hashed_password=fake_hashed_password,
+                          name=user.name,
+                          is_student=user.is_student,
+                          is_teacher=user.is_teacher,
+                          is_education_employee=user.is_education_employee)
     db.add(db_user)
     db.commit()
     db.refresh(db_user)

@@ -119,8 +119,6 @@ public class VotingActivity extends AppCompatActivity {
                 break;
             }
         }
-
-
     }
 
     private ArrayList<String> getInputData() {

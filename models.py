@@ -1,6 +1,6 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
-from .database import Base
+from database import Base
 
 
 class User(Base):
@@ -79,6 +79,7 @@ class TeacherVote(Base):
     # میزان تجدید نظر مستمر در برنامه ها و سرفصل ها با توجه به آخرین پیشرفت ها و تغییرات و تحولات علمی
     mizan_tajdid_nazar_sarfasl_taghirat_tahavolat = Column(Integer)
     teacher_comments = Column(String)
+
     teacher_owner = relationship("User", back_populates="teacher_vote")
 
 

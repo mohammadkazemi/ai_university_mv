@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NazarSanj">
-        <activity android:name=".VotingActivity"></activity>
+        <activity android:name=".EmployeeActivity"></activity>
+        <activity android:name=".TeacherActivity" />
+        <activity android:name=".VotingActivity" />
         <activity android:name=".SubSystemActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

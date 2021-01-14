@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeacherActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="میزان رضایتمندی از امکانات رفاهی" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_emkanat_refahi_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان رضایتمندی از امکانات اقامتی و سیاحتی" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_emkanat_eghamati_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان رضایتمندی از ارائه تسهیلات بانکی" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_tashilate_baki_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان رضایتمندی از خدمات رفاهی در سایر دانشگاه های کشور)اسکان(" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_khadamate_refahi_sayyere_daneshgah_ha_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="میزان رضایتمندی از سامانه های رفاهی" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_samane_refahi_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان رضایت مندی از خدمات امور بیمه تکمیل درمان" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_emkanat_bime_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان تسلط پرسنل اداره آموزش و تحصیلات تکمیلی بر امور آموزشی و اداری" />
+
+            <EditText
+                android:id="@+id/rezayatmandi_personel_amozesh_amore_amozeshi_edari_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان بهره برداری از وسایل اداری ، دستگاه ها و تجهیزات آزمایشگاهی، کارگاهی و…." />
+
+            <EditText
+                android:id="@+id/rezayatmandi_emkanat_edari_dastghah_tajhizate_azmayesh_kargah_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" نحوه پاسخگویی به سوالات و درخواست های تلفنی توسط اداره آموزش و تحصیلات تکمیلی" />
+
+            <EditText
+                android:id="@+id/nahve_pasokhgoii_soalat_darkhast_telephoni_edare_amozesh_tashilt_takmili_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" تشکیل منظم جلسات گروه علمی" />
+
+            <EditText
+                android:id="@+id/tashkil_monazam_jalasat_goroh_elmi_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" مشخص بودن اعضاء گروه علمی و تخصص آنها" />
+
+            <EditText
+                android:id="@+id/moshakhas_aaza_goroh_elmi_takhasos_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" اطلاع رسانی منظم از مصوبات گروه علمی" />
+
+            <EditText
+                android:id="@+id/eltela_monazam_mosavabat_goroh_elmi_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" در دسترس بودن مدیر گروه علمی" />
+
+            <EditText
+                android:id="@+id/dastres_aaza_goroh_elmi_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" مشخص بودن نحوه ارتباط با اعضاء گروه علمی و مدیر گروه" />
+
+            <EditText
+                android:id="@+id/moshakhas_nahve_ertebat_aaza_goroh_elmi_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" میزان تجدید نظر مستمر در برنامه ها و سرفصل ها با توجه به آخرین پیشرفت ها و تغییرات و تحولات علمی" />
+
+            <EditText
+                android:id="@+id/mizan_tajdid_nazar_sarfasl_taghirat_tahavolat_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text=" نظر متنی" />
+
+            <EditText
+                android:id="@+id/teacher_comments_edittxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/submit_vote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="submit"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

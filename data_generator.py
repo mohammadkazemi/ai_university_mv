@@ -43,7 +43,7 @@ for i in range(1, 50):
             # میزان تجدید نظر مستمر در برنامه ها و سرفصل ها با توجه به آخرین پیشرفت ها و تغییرات و تحولات علمی
             "teacher_comments": "i have nothing to say"  # نظر متنی
         }
-        resp = requests.post(base_url + f'/users/{resp.json()["id"]}/teacher_votes/', json=tmp_teacher_vote,
+        resp = requests.post(base_url + f'/user/{resp.json()["id"]}/teacher_votes/', json=tmp_teacher_vote,
                              headers=my_header)
         if resp.status_code != 200:
             print("something going wrong in creating teacher")

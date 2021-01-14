@@ -22,9 +22,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="name"
-        android:visibility="invisible"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+    <RadioGroup
+        android:id="@+id/radio_btn_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/editTextTextPersonName3"
+        app:layout_constraintStart_toStartOf="@id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName3">
+
+        <RadioButton
+            android:id="@+id/radio_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="is student" />
+
+        <RadioButton
+            android:id="@+id/radio_teacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="is teacher" />
+
+        <RadioButton
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/radio_employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="educational employee" />
+
+
+    </RadioGroup>
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
