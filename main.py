@@ -36,10 +36,10 @@ def login_user(user: schemas.UserLogin, db: Session = Depends(get_db)):
     return db_user
 
 
-@app.get("/users/", response_model=List[schemas.User])
-def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    users = crud.get_users(db, skip=skip, limit=limit)
-    return users
+# @app.get("/users/", response_model=List[schemas.User])
+# def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+#     users = crud.get_users(db, skip=skip, limit=limit)
+#     return users
 
 
 @app.get("/users/{user_id}", response_model=schemas.User)
@@ -66,11 +66,15 @@ def create_education_employee_vote(user_id: int, education_employee_vote: schema
     return crud.create_education_employee_vote(db=db, education_employee_vote=education_employee_vote, user_id=user_id)
 
 
-@app.get("/votes/", response_model=List[schemas.Vote])
-def read_votes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    votes = crud.get_votes(db, skip=skip, limit=limit)
-    return votes
+# @app.get("/votes/", response_model=List[schemas.Vote])
+# def read_votes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+#     votes = crud.get_votes(db, skip=skip, limit=limit)
+#     return votes
 
-
+# local 
 if __name__ == '__main__':
     uvicorn.run(app, host="localhost", port=8000)
+
+# server
+# if __name__ == '__main__':
+#     uvicorn.run(app, host="localhost", port=8000)
