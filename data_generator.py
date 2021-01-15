@@ -6,7 +6,7 @@ base_url = 'http://127.0.0.1:8000'
 my_header = {'Content-Type': 'application/json'}
 
 # creating teacher
-for i in range(1, 50):
+for i in range(1, 51):
     tmp_teacher = {"email": f"user{i}@gmail.com",
                    "name": f"user{i}",
                    "password": "test",
