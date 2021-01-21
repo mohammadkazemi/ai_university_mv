@@ -25,7 +25,6 @@ public class WebService {
 
 //    current server
         private final String BASE_URL                         = "http://45.88.78.109:1399";
-//        private final String BASE_URL                         = "http://127.0.0.1:8000";
 //        private final String BASE_URL                         = "http://10.0.2.2:8000";
 //        private final String BASE_URL                         = "http://192.168.1.2:8000";
 //    private final String BASE_URL = "http://localhost:8000";
