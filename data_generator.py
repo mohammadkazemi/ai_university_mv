@@ -1,9 +1,17 @@
+"""تولید یوزر موقت و رای برای یوزر به صورت تصادفی
+"""
 import requests
 import secrets
 
 base_url = 'http://127.0.0.1:8000'
 # base_url = 'http://85.208.184.49:1399'
 my_header = {'Content-Type': 'application/json'}
+
+
+
+
+
+
 
 # creating teacher
 for i in range(1, 51):

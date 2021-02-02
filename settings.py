@@ -1,6 +1,15 @@
 import os
 from dotenv import load_dotenv, find_dotenv
 
+"""
+ در این فایل ما اطلاعات دیتابیس را از فایل 
+ .env 
+ میخوانیم و سپس کانکشن به دیتابیس را برای کتابخانه های 
+ sqlalchemy 
+ که مخصوص کار با دیتابیس است ایجاد میکنیم
+"""
+
+
 load_dotenv(find_dotenv())
 
 DATABASE_USER = os.getenv("DATABASE_USER")

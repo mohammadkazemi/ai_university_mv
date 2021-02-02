@@ -1,3 +1,6 @@
+اگر میخواهید metabase
+را روی سیستم خودتون بالا بیارید باید از روش زیر انجام دهید
+
 sudo apt install default-jre
 java -version
 wget https://downloads.metabase.com/v0.37.6/metabase.jar

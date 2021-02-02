@@ -2,7 +2,8 @@ from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from database import Base
 
-
+    """مدل جدول یوزر در دیتابیس
+    """
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
@@ -18,7 +19,8 @@ class User(Base):
     teacher_vote = relationship("TeacherVote", back_populates="teacher_owner")
     education_employee_vote = relationship("EducationEmployeeVote", back_populates="education_employee_owner")
 
-
+    """مدل جدول رای یوزر دانشجود در دیتابیس
+    """
 class Vote(Base):
     __tablename__ = "votes"
 
@@ -43,7 +45,8 @@ class Vote(Base):
 
     vote_owner = relationship("User", back_populates="votes")
 
-
+    """مدل جدول رای استاد در دیتابیس
+    """
 class TeacherVote(Base):
     __tablename__ = "teacher_vote"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
@@ -82,7 +85,8 @@ class TeacherVote(Base):
 
     teacher_owner = relationship("User", back_populates="teacher_vote")
 
-
+    """مدل جدول رای کادر اموزش در دیتابیس
+    """
 class EducationEmployeeVote(Base):
     __tablename__ = "education_employee_vote"
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)

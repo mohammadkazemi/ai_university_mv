@@ -1,7 +1,12 @@
+    """در این قسمت اسکیمای مدل ها را طراحی میکنیم 
+    برای اینکه بعضی اطلاعات را نمیخواهیم در پاسخ ای پی ای برگردانیم
+    یا همیشه در ریکوست باشند
+    """
 from typing import List
 from pydantic import BaseModel
 
-
+    """اسکیمای رای دانشجو
+    """
 class VoteBase(BaseModel):
     tasalot: int
     general_knowledge: int
@@ -20,7 +25,8 @@ class VoteBase(BaseModel):
     goshade_roii: int
     sayer: str
 
-
+    """اسکیمای رای استاد
+    """
 class TeacherVoteBase(BaseModel):
     rezayatmandi_emkanat_refahi: int  # میزان رضایتمندی از امکانات رفاهی
     rezayatmandi_emkanat_eghamati: int  # میزان رضایتمندی از امکانات اقامتی و سیاحتی
@@ -39,7 +45,8 @@ class TeacherVoteBase(BaseModel):
     mizan_tajdid_nazar_sarfasl_taghirat_tahavolat: int  # میزان تجدید نظر مستمر در برنامه ها و سرفصل ها با توجه به آخرین پیشرفت ها و تغییرات و تحولات علمی
     teacher_comments: str  # نظر متنی
 
-
+    """اسکیمای رای کادر اموزش
+    """
 class EducationEmployeeVoteBase(BaseModel):
     mizan_rezayat_girandegane_khedmat_arbab_rojo: int  # میزان رضایتمندی از پاسخگویی مناسب به گیرندگان خدمت و ارباب رجوع
     tedad_monaseb_karshenas_motenaseb_hajm_faaliyat: int  # تناسب تعداد کارشناسان متخصص رفاه با حجم فعالیت های واحد
@@ -87,12 +94,14 @@ class EducationEmployeeVote(EducationEmployeeVoteBase):
     class Config:
         orm_mode = True
 
-
+        """اطلاعاتی که برای لاگین نیاز است
+        """
 class UserLogin(BaseModel):
     email: str
     password: str
 
-
+    """اسکیمای یوزر 
+    """
 class UserBase(BaseModel):
     email: str
     name: str
@@ -101,6 +110,8 @@ class UserBase(BaseModel):
     is_education_employee: bool
 
 
+    """برای تولید یوزر علاوه بر اطلاعات کلاس ارث بری شده به پسورد هم نیاز است 
+    """
 class UserCreate(UserBase):
     password: str
 

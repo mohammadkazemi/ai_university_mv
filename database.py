@@ -3,6 +3,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from settings import SQLALCHEMY_DATABASE_URL
 
+
+
+"""
+ایجاد کانکشن دیتابیس
+"""
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
 )
